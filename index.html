@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resumfiy - AI Resume Analyzer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#0066FF',
+secondary: '#00D1FF'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.upload-area.dragover { background: rgba(0, 102, 255, 0.1); }
+.testimonial-slider { scroll-behavior: smooth; }
+</style>
+</head>
+<body class="min-h-screen bg-white">
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16">
+<div class="flex items-center">
+<a href="#" class="text-3xl font-['Pacifico'] text-primary">Resumfiy</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#" class="text-gray-700 hover:text-primary">Home</a>
+<a href="#features" class="text-gray-700 hover:text-primary">Features</a>
+<a href="#pricing" class="text-gray-700 hover:text-primary">Pricing</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">Sign Up</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<section class="relative min-h-[600px] flex items-center bg-gradient-to-br from-white to-blue-50">
+<div class="absolute inset-0 bg-[url('https://public.readdy.ai/ai/img_res/d012063bac875f537d38ac3a17b5d789.jpg')] bg-cover bg-center opacity-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h1 class="text-5xl font-bold text-gray-900 mb-6">Analyze Your Resume with AI</h1>
+<p class="text-xl text-gray-600 mb-8">Get instant feedback to improve your job application and stand out from the crowd.</p>
+<div class="upload-area border-2 border-dashed border-gray-300 rounded-lg p-8 text-center cursor-pointer hover:border-primary transition-colors">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+<i class="ri-upload-cloud-line text-4xl text-primary"></i>
+</div>
+<p class="text-lg mb-2">Drag & Drop your resume here</p>
+<p class="text-sm text-gray-500 mb-4">or</p>
+<button class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90">Browse Files</button>
+<p class="text-sm text-gray-500 mt-4">Supported formats: PDF, DOCX, DOC</p>
+</div>
+</div>
+<div class="hidden md:block">
+<img src="https://public.readdy.ai/ai/img_res/2826fea79f46db8e6fe92ce443c78ee6.jpg" alt="Job Search Illustration" class="w-full rounded-lg shadow-2xl">
+</div>
+</div>
+</div>
+</section>
+<section id="features" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">Key Features</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+<i class="ri-brain-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Smart AI-Driven Analysis</h3>
+<p class="text-gray-600">Get detailed insights powered by advanced AI algorithms that analyze your resume content, structure, and formatting.</p>
+</div>
+<div class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+<i class="ri-file-check-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Professional Format Review</h3>
+<p class="text-gray-600">Ensure your resume meets industry standards with our comprehensive format checking system.</p>
+</div>
+<div class="p-6 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+<i class="ri-target-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Job Keywords Optimization</h3>
+<p class="text-gray-600">Match your resume with job requirements using our intelligent keyword analysis and suggestions.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center mb-16">What Our Users Say</h2>
+<div class="relative">
+<div class="testimonial-slider flex overflow-x-auto gap-6 pb-8 hide-scrollbar">
+<div class="min-w-[350px] bg-white p-6 rounded-lg shadow-lg">
+<div class="flex items-center mb-4">
+<img src="https://public.readdy.ai/ai/img_res/3c0cebc5c4baeea4f4805a98aad2a018.jpg" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-semibold">Sarah Johnson</h4>
+<p class="text-sm text-gray-500">Software Engineer</p>
+</div>
+</div>
+<div class="flex text-yellow-400 mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-600">"Resumfiy helped me optimize my resume and land my dream job. The AI feedback was incredibly valuable!"</p>
+</div>
+<div class="min-w-[350px] bg-white p-6 rounded-lg shadow-lg">
+<div class="flex items-center mb-4">
+<img src="https://public.readdy.ai/ai/img_res/bdc15edafa1ddfc81d41b62240c385e8.jpg" alt="Michael Chen" class="w-12 h-12 rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-semibold">Michael Chen</h4>
+<p class="text-sm text-gray-500">Product Manager</p>
+</div>
+</div>
+<div class="flex text-yellow-400 mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-600">"The keyword matching feature is fantastic! It helped me tailor my resume perfectly for each application."</p>
+</div>
+<div class="min-w-[350px] bg-white p-6 rounded-lg shadow-lg">
+<div class="flex items-center mb-4">
+<img src="https://public.readdy.ai/ai/img_res/69bfa5ff092dc155c865b68762b0ec85.jpg" alt="David Miller" class="w-12 h-12 rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-semibold">David Miller</h4>
+<p class="text-sm text-gray-500">Marketing Director</p>
+</div>
+</div>
+<div class="flex text-yellow-400 mb-2">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-600">"The format review saved me hours of work. The suggestions were spot-on and professional."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 bg-gradient-to-br from-primary/5 to-secondary/5">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h2 class="text-4xl font-bold mb-6">Ready to Optimize Your Resume?</h2>
+<p class="text-xl text-gray-600 mb-8">Join thousands of job seekers who improved their chances of landing their dream job</p>
+<button class="bg-primary text-white px-8 py-3 text-lg !rounded-button hover:bg-primary/90 mb-4">Get Started Free</button>
+<p class="text-sm text-gray-500">No credit card required</p>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">Resumfiy</a>
+<p class="text-gray-400">AI-powered resume analysis and optimization tool to help you land your dream job.</p>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Features</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Pricing</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Follow Us</h3>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center">
+<i class="ri-linkedin-line"></i>
+</a>
+<a href="#" class="text-gray-400 hover:text-white w-8 h-8 flex items-center justify-center">
+<i class="ri-facebook-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="font-semibold mb-4">Newsletter</h3>
+<form class="flex">
+<input type="email" placeholder="Enter your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-button focus:outline-none focus:ring-2 focus:ring-primary">
+<button type="submit" class="bg-primary text-white px-4 !rounded-r-button hover:bg-primary/90">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+<p>&copy; 2025 Resumfiy. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+<script>
+const uploadArea = document.querySelector('.upload-area');
+uploadArea.addEventListener('dragover', (e) => {
+e.preventDefault();
+uploadArea.classList.add('dragover');
+});
+uploadArea.addEventListener('dragleave', () => {
+uploadArea.classList.remove('dragover');
+});
+uploadArea.addEventListener('drop', (e) => {
+e.preventDefault();
+uploadArea.classList.remove('dragover');
+const files = e.dataTransfer.files;
+handleFiles(files);
+});
+uploadArea.addEventListener('click', () => {
+const input = document.createElement('input');
+input.type = 'file';
+input.accept = '.pdf,.doc,.docx';
+input.onchange = (e) => handleFiles(e.target.files);
+input.click();
+});
+function handleFiles(files) {
+if (files.length > 0) {
+const file = files[0];
+const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+if (allowedTypes.includes(file.type)) {
+const notification = document.createElement('div');
+notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded shadow-lg z-50';
+notification.textContent = 'File uploaded successfully! Analysis in progress...';
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.remove();
+}, 3000);
+} else {
+const notification = document.createElement('div');
+notification.className = 'fixed top-4 right-4 bg-red-500 text-white px-6 py-3 rounded shadow-lg z-50';
+notification.textContent = 'Please upload a PDF or Word document.';
+document.body.appendChild(notification);
+setTimeout(() => {
+notification.remove();
+}, 3000);
+}
+}
+}
+</script>
+</body>
+</html>
